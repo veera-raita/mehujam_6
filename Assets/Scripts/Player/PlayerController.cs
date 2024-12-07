@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -15,8 +16,12 @@ public class PlayerController : MonoBehaviour
     [Header("Dynamic Values")]
     private bool clickHeld = false;
     private bool moving = false;
+    private bool canMove = true;
+    private Vector2 screenPosition = Vector2.zero;
+    private Vector2 clickedPoint = Vector2.zero;
     private Vector2 moveTo = Vector2.zero;
     private Vector2 moveDir = Vector2.zero;
+    private GameObject interactObject;
 
 #region standard methods
 
@@ -44,13 +49,51 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter2D(Collider2D _collider)
+    {
+        if (_collider == null) return;
+
+        if (_collider.gameObject.CompareTag("House"))
+        {
+            interactObject = _collider.gameObject;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D _collider)
+    {
+        if (_collider == null) return;
+
+        if (_collider.gameObject.CompareTag("House"))
+        {
+            interactObject = null;
+        }
+    }
+
 #endregion
 
 #region class methods
 
+    private void Interact()
+    {
+        if (interactObject == null) return;
+
+        Collider2D[] overlapObjects = Physics2D.OverlapPointAll(clickedPoint);
+
+        if (overlapObjects.Length > 0)
+        {
+            foreach (Collider2D col in overlapObjects)
+            {
+                if (col.gameObject == interactObject)
+                {
+                    interactObject.GetComponent<IInteractable>().Interact();
+                }
+            }
+        }
+    }
+
     private void HandleMove()
     {
-        if (Vector2.Distance(firstCatPosition.position, moveTo) > moveThreshold)
+        if (canMove && Vector2.Distance(firstCatPosition.position, moveTo) > moveThreshold)
         {
             moving = true;
             Move();
@@ -76,6 +119,24 @@ public class PlayerController : MonoBehaviour
         moveDir = (moveTo - (Vector2)firstCatPosition.position).normalized;
     }
 
+    private void ClickedUICheck()
+    {
+        bool clickedUI;
+        RectTransform[] uiObjects = FindObjectsByType<RectTransform>(FindObjectsSortMode.None);
+
+        foreach(RectTransform rect in uiObjects)
+        {
+            clickedUI = (screenPosition.x > rect.rect.min.x && screenPosition.x < rect.rect.max.x) ||
+                             (screenPosition.y > rect.rect.min.y && screenPosition.y < rect.rect.max.y);
+
+            if (clickedUI)
+            {
+                canMove = false;
+                break;
+            }
+        }
+    }
+
 #endregion
 
 #region input handlers
@@ -83,15 +144,19 @@ public class PlayerController : MonoBehaviour
     private void HandleClickStart()
     {
         clickHeld = true;
+        canMove = true;
+        ClickedUICheck();
     }
 
     private void HandleClickStop()
     {
         clickHeld = false;
+        clickedPoint = moveTo;
     }
 
     private void GetPosition(Vector2 _position)
     {
+        screenPosition = _position;
         moveTo = Camera.main.ScreenToWorldPoint(_position);
         CalcDir();
     }
