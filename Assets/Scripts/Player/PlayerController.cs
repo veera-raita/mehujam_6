@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
         foreach(RectTransform rect in uiObjects)
         {
             clickedUI = (screenPosition.x > rect.rect.min.x && screenPosition.x < rect.rect.max.x) ||
-                             (screenPosition.y > rect.rect.min.y && screenPosition.y < rect.rect.max.y);
+                        (screenPosition.y > rect.rect.min.y && screenPosition.y < rect.rect.max.y);
 
             if (clickedUI)
             {

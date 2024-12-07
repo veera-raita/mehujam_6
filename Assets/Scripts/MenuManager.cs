@@ -5,6 +5,7 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager instance;
 
+    [SerializeField] private InputReader inputReader;
     [SerializeField] private GameObject giftMenu;
     [SerializeField] private TextMeshProUGUI explanationText;
     [SerializeField] private TextMeshProUGUI houseName;
@@ -26,10 +27,12 @@ public class MenuManager : MonoBehaviour
         giftMenu.SetActive(true);
         explanationText.text = _explanation;
         houseName.text = _houseName;
+        inputReader.DisableGameplay();
     }
 
     public void CloseGiftMenu()
     {
         giftMenu.SetActive(false);
+        inputReader.EnableGameplay();
     }
 }

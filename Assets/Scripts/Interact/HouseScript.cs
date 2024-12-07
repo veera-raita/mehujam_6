@@ -26,14 +26,14 @@ public class HouseScript : MonoBehaviour, IInteractable
         }
         else if (who == 1)
         {
-            explanation = person[who] + KidNamer.GetName() + "has";
+            explanation = person[who] + KidNamer.GetName() + " has";
         }
         else
         {
-            explanation = person[who] + "has";
+            explanation = person[who] + " has";
         }
 
-        explanation += " wanted " + wantedGift;
+        explanation += " wanted " + wantedGift.name;
 
         int howLong = Random.Range(0, 3);
         if (howLong == 0)
