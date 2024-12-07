@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D firstCatRB;
 
     [Header("Const Values")]
-    private const float maxSpeed = 3f;
-    private const float acceleration = 300f;
+    private const float maxSpeed = 3.5f;
+    private const float acceleration = 500f;
     private const float moveThreshold = 0.2f;
     
     [Header("Dynamic Values")]
@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D _collider)
     {
+        Debug.Log("entered a trigger");
         if (_collider == null) return;
 
         if (_collider.gameObject.CompareTag("House"))
@@ -127,7 +128,7 @@ public class PlayerController : MonoBehaviour
         foreach(RectTransform rect in uiObjects)
         {
             clickedUI = (screenPosition.x > rect.rect.min.x && screenPosition.x < rect.rect.max.x) ||
-                             (screenPosition.y > rect.rect.min.y && screenPosition.y < rect.rect.max.y);
+                        (screenPosition.y > rect.rect.min.y && screenPosition.y < rect.rect.max.y);
 
             if (clickedUI)
             {
@@ -152,6 +153,7 @@ public class PlayerController : MonoBehaviour
     {
         clickHeld = false;
         clickedPoint = moveTo;
+        Interact();
     }
 
     private void GetPosition(Vector2 _position)
