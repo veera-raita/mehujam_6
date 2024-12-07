@@ -13,7 +13,7 @@ public class HouseScript : MonoBehaviour, IInteractable
     {
         "I",
         "Little",
-        "My love"
+        "The kids"
     };
 
     private void ConstructStrings()
@@ -30,7 +30,7 @@ public class HouseScript : MonoBehaviour, IInteractable
         }
         else
         {
-            explanation = person[who] + " has";
+            explanation = person[who] + " have";
         }
 
         explanation += " wanted " + wantedGift.name;
@@ -62,10 +62,13 @@ public class HouseScript : MonoBehaviour, IInteractable
         ConstructStrings();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D _collider)
     {
-        
+        if (_collider == null) return;
+        if (_collider.gameObject.CompareTag("Player"))
+        {
+            _collider.gameObject.GetComponent<PlayerController>().lastWantedGift = wantedGift.type;
+        }
     }
 
     public void Interact()

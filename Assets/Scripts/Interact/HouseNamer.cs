@@ -30,13 +30,21 @@ public class HouseNamer
     {
         if (!initialized) InitializeNames();
 
-        for (int i = 0; i < names.Count; i++)
+        int nameIndex = Random.Range(0, names.Count);
+        if (names.ElementAt(nameIndex).Value == false) return names.ElementAt(nameIndex).Key;
+
+        int startingIndex = nameIndex;
+
+        while (true)
         {
-            if (names.ElementAt(i).Value == false)
+            nameIndex++;
+            if (nameIndex >= names.Count) nameIndex = 0;
+            if (names.ElementAt(nameIndex).Value == false)
             {
-                names[names.ElementAt(i).Key] = true;
-                return names.ElementAt(i).Key;
+                names[names.ElementAt(nameIndex).Key] = true;
+                return names.ElementAt(nameIndex).Key;
             }
+            if (startingIndex == nameIndex) break;
         }
 
         return "Roserock";

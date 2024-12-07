@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveTo = Vector2.zero;
     private Vector2 moveDir = Vector2.zero;
     private GameObject interactObject;
+    public Gift.Type lastWantedGift { get; set; }
 
 #region standard methods
 
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("entered a trigger");
         if (_collider == null) return;
 
-        if (_collider.gameObject.CompareTag("House"))
+        if (_collider.gameObject.CompareTag("Interactable"))
         {
             interactObject = _collider.gameObject;
         }
@@ -64,7 +65,7 @@ public class PlayerController : MonoBehaviour
     {
         if (_collider == null) return;
 
-        if (_collider.gameObject.CompareTag("House"))
+        if (_collider.gameObject.CompareTag("Interactable"))
         {
             interactObject = null;
         }
@@ -120,17 +121,16 @@ public class PlayerController : MonoBehaviour
         moveDir = (moveTo - (Vector2)firstCatPosition.position).normalized;
     }
 
-    private void ClickedUICheck()
+    private void ClickedInteractCheck()
     {
-        bool clickedUI;
-        RectTransform[] uiObjects = FindObjectsByType<RectTransform>(FindObjectsSortMode.None);
+        bool interacted;
+        Collider2D[] uiObjects = Physics2D.OverlapPointAll(moveTo);
 
-        foreach(RectTransform rect in uiObjects)
+        foreach(Collider2D col in uiObjects)
         {
-            clickedUI = (screenPosition.x > rect.rect.min.x && screenPosition.x < rect.rect.max.x) ||
-                        (screenPosition.y > rect.rect.min.y && screenPosition.y < rect.rect.max.y);
+            interacted = col.gameObject.CompareTag("Object");
 
-            if (clickedUI)
+            if (interacted)
             {
                 canMove = false;
                 break;
@@ -146,7 +146,7 @@ public class PlayerController : MonoBehaviour
     {
         clickHeld = true;
         canMove = true;
-        ClickedUICheck();
+        ClickedInteractCheck();
     }
 
     private void HandleClickStop()
