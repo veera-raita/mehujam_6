@@ -201,19 +201,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1022,43 +1009,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      mj6_tilemap_0: -5692729832158146887
-      mj6_tilemap_1: -4945470574241433013
-      mj6_tilemap_10: -8680849117779053859
-      mj6_tilemap_11: -2149027365187547105
-      mj6_tilemap_12: -6187353412322998255
-      mj6_tilemap_13: 5778106108441764515
-      mj6_tilemap_14: 3177925026493156082
-      mj6_tilemap_15: 5638170105511475064
-      mj6_tilemap_16: -8979870969812249494
-      mj6_tilemap_17: 9064853411115483117
-      mj6_tilemap_18: 1015138059456630021
-      mj6_tilemap_19: 2172488340235348087
-      mj6_tilemap_2: 8274286494447541206
-      mj6_tilemap_20: -2776708401777225903
-      mj6_tilemap_21: 6205760275476977433
-      mj6_tilemap_22: 41241170078622635
-      mj6_tilemap_23: -4659582281820731763
-      mj6_tilemap_24: -4006063169148164271
-      mj6_tilemap_25: 6591662365931711595
-      mj6_tilemap_26: -8651668164631203554
-      mj6_tilemap_27: -5234222060881247871
-      mj6_tilemap_28: -5284446442887969919
-      mj6_tilemap_29: -850886090485296824
-      mj6_tilemap_3: -5668650643697452520
-      mj6_tilemap_30: -2322801304289940148
-      mj6_tilemap_31: 6651557070766864673
-      mj6_tilemap_32: 6333250144507781567
-      mj6_tilemap_33: 3457392291359692876
-      mj6_tilemap_34: -7377069958492407000
-      mj6_tilemap_35: 5510276516231817378
-      mj6_tilemap_4: -8797981686163702469
-      mj6_tilemap_5: 8246783756438065825
-      mj6_tilemap_6: -3852614558992897435
-      mj6_tilemap_7: -5548108685253931425
-      mj6_tilemap_8: 7126071165950517594
-      mj6_tilemap_9: -6520834147400567941
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
