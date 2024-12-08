@@ -1,0 +1,1017 @@
+fileFormatVersion: 2
+guid: 70b1717065526fa448edbbe2277425e7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5692729832158146887
+    second: mj6_tilemap_0
+  - first:
+      213: -4945470574241433013
+    second: mj6_tilemap_1
+  - first:
+      213: 8274286494447541206
+    second: mj6_tilemap_2
+  - first:
+      213: -5668650643697452520
+    second: mj6_tilemap_3
+  - first:
+      213: -8797981686163702469
+    second: mj6_tilemap_4
+  - first:
+      213: 8246783756438065825
+    second: mj6_tilemap_5
+  - first:
+      213: -3852614558992897435
+    second: mj6_tilemap_6
+  - first:
+      213: -5548108685253931425
+    second: mj6_tilemap_7
+  - first:
+      213: 7126071165950517594
+    second: mj6_tilemap_8
+  - first:
+      213: -6520834147400567941
+    second: mj6_tilemap_9
+  - first:
+      213: -8680849117779053859
+    second: mj6_tilemap_10
+  - first:
+      213: -2149027365187547105
+    second: mj6_tilemap_11
+  - first:
+      213: -6187353412322998255
+    second: mj6_tilemap_12
+  - first:
+      213: 5778106108441764515
+    second: mj6_tilemap_13
+  - first:
+      213: 3177925026493156082
+    second: mj6_tilemap_14
+  - first:
+      213: 5638170105511475064
+    second: mj6_tilemap_15
+  - first:
+      213: -8979870969812249494
+    second: mj6_tilemap_16
+  - first:
+      213: 9064853411115483117
+    second: mj6_tilemap_17
+  - first:
+      213: 1015138059456630021
+    second: mj6_tilemap_18
+  - first:
+      213: 2172488340235348087
+    second: mj6_tilemap_19
+  - first:
+      213: -2776708401777225903
+    second: mj6_tilemap_20
+  - first:
+      213: 6205760275476977433
+    second: mj6_tilemap_21
+  - first:
+      213: 41241170078622635
+    second: mj6_tilemap_22
+  - first:
+      213: -4659582281820731763
+    second: mj6_tilemap_23
+  - first:
+      213: -4006063169148164271
+    second: mj6_tilemap_24
+  - first:
+      213: 6591662365931711595
+    second: mj6_tilemap_25
+  - first:
+      213: -8651668164631203554
+    second: mj6_tilemap_26
+  - first:
+      213: -5234222060881247871
+    second: mj6_tilemap_27
+  - first:
+      213: -5284446442887969919
+    second: mj6_tilemap_28
+  - first:
+      213: -850886090485296824
+    second: mj6_tilemap_29
+  - first:
+      213: -2322801304289940148
+    second: mj6_tilemap_30
+  - first:
+      213: 6651557070766864673
+    second: mj6_tilemap_31
+  - first:
+      213: 6333250144507781567
+    second: mj6_tilemap_32
+  - first:
+      213: 3457392291359692876
+    second: mj6_tilemap_33
+  - first:
+      213: -7377069958492407000
+    second: mj6_tilemap_34
+  - first:
+      213: 5510276516231817378
+    second: mj6_tilemap_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mj6_tilemap_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 2159
+        width: 256
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bec1f7016c5ff0b0800000000000000
+      internalID: -5692729832158146887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1937
+        width: 602
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a313707b82e5bb0800000000000000
+      internalID: -4945470574241433013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_2
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 2147
+        width: 256
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6db9b574abb24d270800000000000000
+      internalID: 8274286494447541206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_3
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 1925
+        width: 602
+        height: 475
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81abf9af548e451b0800000000000000
+      internalID: -5668650643697452520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_4
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 2020
+        width: 432
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3df1d7254a47e580800000000000000
+      internalID: -8797981686163702469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_5
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 1621
+        width: 476
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a2d3f51226727270800000000000000
+      internalID: 8246783756438065825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_6
+      rect:
+        serializedVersion: 2
+        x: 2060
+        y: 2265
+        width: 149
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56aeaba7873c88ac0800000000000000
+      internalID: -3852614558992897435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_7
+      rect:
+        serializedVersion: 2
+        x: 2190
+        y: 2101
+        width: 210
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e0e20cb882103b0800000000000000
+      internalID: -5548108685253931425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_8
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1991
+        width: 155
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5162aa48f3e4e260800000000000000
+      internalID: 7126071165950517594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_9
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1928
+        width: 208
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73b3fc44e75185a0800000000000000
+      internalID: -6520834147400567941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_10
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1979
+        width: 155
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2340278bd678780800000000000000
+      internalID: -8680849117779053859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_11
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 1916
+        width: 208
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1017655ffe1d22e0800000000000000
+      internalID: -2149027365187547105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 559
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 118cfae7ada122aa0800000000000000
+      internalID: -6187353412322998255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_13
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 1758
+        width: 190
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a2af2454e4ff2050800000000000000
+      internalID: 5778106108441764515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 984
+        width: 462
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fac2f669f14a1c20800000000000000
+      internalID: 3177925026493156082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_15
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 1335
+        width: 187
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 877fc32b6ddce3e40800000000000000
+      internalID: 5638170105511475064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_16
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 1535
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a649f7b2ee6116380800000000000000
+      internalID: -8979870969812249494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_17
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 1424
+        width: 151
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: defb6865624dccd70800000000000000
+      internalID: 9064853411115483117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_18
+      rect:
+        serializedVersion: 2
+        x: 2150
+        y: 1336
+        width: 226
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d44e7cfae761e00800000000000000
+      internalID: 1015138059456630021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_19
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 809
+        width: 225
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778e76692aa362e10800000000000000
+      internalID: 2172488340235348087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 821
+        width: 151
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15fc9339b662779d0800000000000000
+      internalID: -2776708401777225903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_21
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 858
+        width: 188
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917190d471a4f1650800000000000000
+      internalID: 6205760275476977433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_22
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 814
+        width: 472
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba368ac20a4829000800000000000000
+      internalID: 41241170078622635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 147
+        width: 554
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d860f5a2a96d55fb0800000000000000
+      internalID: -4659582281820731763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_24
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 361
+        width: 195
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157e52fc5ca9768c0800000000000000
+      internalID: -4006063169148164271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_25
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 477
+        width: 164
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6caba86ff94a7b50800000000000000
+      internalID: 6591662365931711595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_26
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 225
+        width: 364
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e11f99c84a91fe780800000000000000
+      internalID: -8651668164631203554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_27
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 524
+        width: 248
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18109a984ce4c57b0800000000000000
+      internalID: -5234222060881247871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_28
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 0
+        width: 605
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 183061955ffd9a6b0800000000000000
+      internalID: -5284446442887969919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_29
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 292
+        width: 209
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8419d40eb9b0134f0800000000000000
+      internalID: -850886090485296824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_30
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 263
+        width: 156
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4debfd3580c3cfd0800000000000000
+      internalID: -2322801304289940148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_31
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 3
+        width: 506
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 129fb461ae31f4c50800000000000000
+      internalID: 6651557070766864673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_32
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 23
+        width: 150
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1e311937934e750800000000000000
+      internalID: 6333250144507781567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_33
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 0
+        width: 475
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c481baf88ff1bff20800000000000000
+      internalID: 3457392291359692876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_34
+      rect:
+        serializedVersion: 2
+        x: 1334
+        y: 21
+        width: 259
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82bbad845f16f9990800000000000000
+      internalID: -7377069958492407000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mj6_tilemap_35
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 10
+        width: 177
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8ac2cfb4f687c40800000000000000
+      internalID: 5510276516231817378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
