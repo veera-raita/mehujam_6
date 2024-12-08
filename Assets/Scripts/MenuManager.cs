@@ -74,6 +74,7 @@ public class MenuManager : MonoBehaviour
         inputReader.DisableGameplay();
         startPanel.gameObject.SetActive(true);
         fader = StartCoroutine(FadeIn());
+        totalHouses = houses.Length;
     }
 
     void Update()
