@@ -24,6 +24,14 @@ public class HouseNamer
         names.Add("Pinekeep",false);
         names.Add("Hearthhold",false);
         names.Add("Redvale",false);
+        initialized = true;
+    }
+
+    void Start()
+    {
+        names.Clear();
+        InitializeNames();
+        initialized = true;
     }
 
     public static string GetName()

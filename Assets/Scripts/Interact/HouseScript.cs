@@ -8,11 +8,12 @@ public class HouseScript : MonoBehaviour, IInteractable
     private string explanation = "";
     private string houseName = "";
     [SerializeField] private string houseType = "";
+    [SerializeField] private int number;
 
     private string[] person = 
     {
         "I",
-        "Little",
+        "Little ",
         "The kids"
     };
 
@@ -67,7 +68,11 @@ public class HouseScript : MonoBehaviour, IInteractable
         if (_collider == null) return;
         if (_collider.gameObject.CompareTag("Player"))
         {
-            _collider.gameObject.GetComponent<PlayerController>().lastWantedGift = wantedGift.type;
+            PlayerController player = _collider.gameObject.GetComponent<PlayerController>();
+            player.lastWantedGift = wantedGift.type;
+            player.deliveringToHouseNumber = number;
+
+            Debug.Log(wantedGift.type);
         }
     }
 

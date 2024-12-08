@@ -1,16 +1,26 @@
+using System.Collections;
 using TMPro;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
     public static MenuManager instance;
 
+    //base functionality
     [SerializeField] private PlayerController playerController;
+    [SerializeField] private Transform playerPos;
     [SerializeField] private InputReader inputReader;
     [SerializeField] private GameObject giftMenu;
     [SerializeField] private TextMeshProUGUI explanationText;
     [SerializeField] private TextMeshProUGUI houseName;
+
+    //pointer
+    [SerializeField] private RectTransform pointer;
+    [SerializeField] private Transform[] houses;
 
     //happiness counter stuff
     [SerializeField] private Image verySadObj;
@@ -31,6 +41,21 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Sprite veryHappyColors;
 
     private int score = 3; //1 for very sad, 2 for sad, 3 for neutral, 4 for happy, 5 for very happy
+    [SerializeField] private int totalHouses;
+    public int deliveredHouses { get; private set; } = 0;
+    private int realScore;
+
+    //game end stuff here
+    [SerializeField] private TextMeshProUGUI recapText;
+    [SerializeField] private GameObject endScreen;
+
+    //game start stuff here
+    [SerializeField] private Image startPanel;
+    [SerializeField] private TextMeshProUGUI titleText;
+    [SerializeField] private TextMeshProUGUI tutText;
+    private const float fadeInTime = 3.0f;
+    private const float startTime = 4.0f;
+    private Coroutine fader;
 
     void Awake()
     {
@@ -42,6 +67,41 @@ public class MenuManager : MonoBehaviour
         {
             Debug.LogError("Found more than one MenuManager, fix this immediately!");
         }
+    }
+
+    void Start()
+    {
+        inputReader.DisableGameplay();
+        startPanel.gameObject.SetActive(true);
+        fader = StartCoroutine(FadeIn());
+    }
+
+    void Update()
+    {
+        PointerUpdate();
+    }
+
+    private IEnumerator DelayControls()
+    {
+        yield return new WaitForSeconds(0.2f);
+        inputReader.EnableGameplay();
+    }
+
+    private void PointerUpdate()
+    {
+        Vector2 dir;
+
+        if (deliveredHouses < totalHouses)
+        {
+            dir = (playerPos.position - houses[deliveredHouses].position).normalized;
+        }
+        else
+        {
+            dir = (playerPos.position - houses[deliveredHouses-1].position).normalized;
+        }
+
+        float zRotation = Vector2.SignedAngle(Vector2.up, dir);
+        pointer.transform.rotation = Quaternion.Euler(0, 0, zRotation);
     }
     
     public void OpenGiftMenu(string _explanation, string _houseName)
@@ -57,11 +117,13 @@ public class MenuManager : MonoBehaviour
         if (playerController.lastWantedGift == _type)
         {
             if (score < 5) score++;
+            realScore++;
         }
         else
         {
             if (score > 1) score--;
         }
+        deliveredHouses++;
         UpdateHappiness();
         CloseGiftMenu();
         
@@ -72,6 +134,69 @@ public class MenuManager : MonoBehaviour
     {
         giftMenu.SetActive(false);
         inputReader.EnableGameplay();
+
+
+        if (deliveredHouses == totalHouses)
+        {
+            GameEnd();
+        }
+    }
+
+    private void GameEnd()
+    {
+        endScreen.SetActive(true);
+
+        string recap = "You delivered gifts to a total of " + totalHouses +
+        ", and in the end, " + realScore + "/" + totalHouses + " were correct!\n";
+
+        if ((float)realScore / (float)totalHouses >= 0.8f)
+        {
+            recap += "Good work, Santa Paws!";
+        }
+        else
+        {
+            recap += "Still a bit left to learn!";
+        }
+
+        recapText.text = recap;
+    }
+
+    public void RestartGame()
+    {
+        playerController.ClearEvents();
+        SceneManager.LoadScene(0);
+    }
+
+    private IEnumerator FadeIn()
+    {
+        float timer = 0;
+        Color panelColor = startPanel.color;
+        Color textColor = titleText.color;
+
+        yield return new WaitForSeconds(startTime);
+
+        while (timer < fadeInTime)
+        {
+            timer += Time.deltaTime;
+
+            panelColor.a = Mathf.Lerp(1f, 0f, timer / fadeInTime);
+            textColor.a = Mathf.Lerp(1f, 0f, timer / fadeInTime);
+
+            startPanel.color = panelColor;
+            titleText.color = textColor;
+            tutText.color = textColor;
+            yield return null;
+        }
+
+        StartCoroutine(DelayControls());
+        startPanel.gameObject.SetActive(false);
+    }
+
+    public void CloseStartScreen()
+    {
+        StartCoroutine(DelayControls());
+        startPanel.gameObject.SetActive(false);
+        StopCoroutine(fader);
     }
 
     private void UpdateHappiness()

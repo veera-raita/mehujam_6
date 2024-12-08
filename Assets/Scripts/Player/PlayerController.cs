@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDir = Vector2.zero;
     private GameObject interactObject;
     public Gift.Type lastWantedGift { get; set; }
+    public int deliveringToHouseNumber { get; set; } = 0;
 
 #region standard methods
 
@@ -43,11 +44,12 @@ public class PlayerController : MonoBehaviour
         if (clickHeld)
         HandleMove();
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void ClearEvents()
     {
-        
+        inputReader.ClickEvent -= HandleClickStart;
+        inputReader.ClickCanceledEvent -= HandleClickStop;
+        inputReader.PositionEvent -= GetPosition;
     }
 
     private void OnTriggerEnter2D(Collider2D _collider)
@@ -85,7 +87,7 @@ public class PlayerController : MonoBehaviour
         {
             foreach (Collider2D col in overlapObjects)
             {
-                if (col.gameObject == interactObject)
+                if (col.gameObject == interactObject && MenuManager.instance.deliveredHouses == deliveringToHouseNumber)
                 {
                     interactObject.GetComponent<IInteractable>().Interact();
                 }
