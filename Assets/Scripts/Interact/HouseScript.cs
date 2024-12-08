@@ -71,14 +71,11 @@ public class HouseScript : MonoBehaviour, IInteractable
             PlayerController player = _collider.gameObject.GetComponent<PlayerController>();
             player.lastWantedGift = wantedGift.type;
             player.deliveringToHouseNumber = number;
-
-            Debug.Log(wantedGift.type);
         }
     }
 
     public void Interact()
     {
-        Debug.Log("interacted with a house");
         MenuManager.instance.OpenGiftMenu(explanation, houseName);
     }
 }

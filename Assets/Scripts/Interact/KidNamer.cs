@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[CreateAssetMenu]
 public class KidNamer : ScriptableObject
 {
     private static string[] kidNames =

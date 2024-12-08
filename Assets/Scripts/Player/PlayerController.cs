@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InputReader inputReader;
     [SerializeField] private Transform firstCatPosition;
     [SerializeField] private Rigidbody2D firstCatRB;
+    [SerializeField] private RectTransform muteRect;
 
     [Header("Const Values")]
     private const float maxSpeed = 3.5f;
@@ -15,7 +16,6 @@ public class PlayerController : MonoBehaviour
     
     [Header("Dynamic Values")]
     private bool clickHeld = false;
-    private bool moving = false;
     private bool canMove = true;
     private Vector2 screenPosition = Vector2.zero;
     private Vector2 clickedPoint = Vector2.zero;
@@ -33,8 +33,6 @@ public class PlayerController : MonoBehaviour
         inputReader.ClickEvent += HandleClickStart;
         inputReader.ClickCanceledEvent += HandleClickStop;
         inputReader.PositionEvent += GetPosition;
-
-        inputReader.EnableGameplay();
     }
 
     // FixedUpdate is called once every 0.2 seconds
@@ -54,7 +52,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D _collider)
     {
-        Debug.Log("entered a trigger");
         if (_collider == null) return;
 
         if (_collider.gameObject.CompareTag("Interactable"))
@@ -99,12 +96,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canMove && Vector2.Distance(firstCatPosition.position, moveTo) > moveThreshold)
         {
-            moving = true;
             Move();
-        }
-        else
-        {
-            moving = false;
         }
     }
 
@@ -140,6 +132,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void ClickedMuteCheck()
+    {
+        if (screenPosition.x > muteRect.position.x && screenPosition.x < muteRect.position.x + muteRect.rect.width &&
+            screenPosition.y > muteRect.position.y && screenPosition.y < muteRect.position.y + muteRect.rect.height)
+        {
+            canMove = false;
+        }
+    }
+
 #endregion
 
 #region input handlers
@@ -149,6 +150,7 @@ public class PlayerController : MonoBehaviour
         clickHeld = true;
         canMove = true;
         ClickedInteractCheck();
+        ClickedMuteCheck();
     }
 
     private void HandleClickStop()

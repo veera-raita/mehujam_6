@@ -24,6 +24,9 @@ public class HouseNamer
         names.Add("Pinekeep",false);
         names.Add("Hearthhold",false);
         names.Add("Redvale",false);
+        names.Add("Haymantle",false);
+        names.Add("Daywind",false);
+        names.Add("Mistbind",false);
         initialized = true;
     }
 

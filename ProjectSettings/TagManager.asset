@@ -52,5 +52,8 @@ TagManager:
   - name: player
     uniqueID: 3866982781
     locked: 0
+  - name: lantern
+    uniqueID: 2969597935
+    locked: 0
   m_RenderingLayers:
   - Default

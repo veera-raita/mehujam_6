@@ -18,6 +18,14 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI explanationText;
     [SerializeField] private TextMeshProUGUI houseName;
 
+    //audio stuff
+    [SerializeField] private AudioSource jingleSource;
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private Image muteObj;
+    [SerializeField] private Sprite muteImg;
+    [SerializeField] private Sprite unmuteImg;
+    private bool muted = false;
+
     //pointer
     [SerializeField] private RectTransform pointer;
     [SerializeField] private Transform[] houses;
@@ -53,6 +61,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Image startPanel;
     [SerializeField] private TextMeshProUGUI titleText;
     [SerializeField] private TextMeshProUGUI tutText;
+    [SerializeField] private Image logo;
     private const float fadeInTime = 3.0f;
     private const float startTime = 4.0f;
     private Coroutine fader;
@@ -124,11 +133,12 @@ public class MenuManager : MonoBehaviour
         {
             if (score > 1) score--;
         }
+
         deliveredHouses++;
+        jingleSource.Play();
+
         UpdateHappiness();
         CloseGiftMenu();
-        
-        //UPDATE POINTER HERE
     }
 
     public void CloseGiftMenu()
@@ -143,12 +153,30 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    public void ToggleMute()
+    {
+        if (muted) //if muted, unmute
+        {
+            muteObj.sprite = muteImg;
+            jingleSource.mute = false;
+            musicSource.mute = false;
+            muted = false;
+        }
+        else
+        {   
+            muteObj.sprite = unmuteImg;
+            jingleSource.mute = true;
+            musicSource.mute = true;
+            muted = true;
+        }
+    }
+
     private void GameEnd()
     {
         endScreen.SetActive(true);
 
         string recap = "You delivered gifts to a total of " + totalHouses +
-        ", and in the end, " + realScore + "/" + totalHouses + " were correct!\n";
+        " houses, and in the end, " + realScore + "/" + totalHouses + " were correct!\n";
 
         if ((float)realScore / (float)totalHouses >= 0.8f)
         {
@@ -186,6 +214,7 @@ public class MenuManager : MonoBehaviour
             startPanel.color = panelColor;
             titleText.color = textColor;
             tutText.color = textColor;
+            logo.color = textColor;
             yield return null;
         }
 
